@@ -6,17 +6,22 @@ struct SwiftPlayground {
     static func main() {
      
     //constant
-    
+    let sTier = 250.0
+    let aTier = 100.0
+    let bTier = 50.0
+    let cTier = 25.0
+    let dTier = 10.0
+
 
     let rankLabels = ["F Tier", "D Tier", "C Tier", "B Tier", "A Tier", "S Tier"]
 
-    func rankIndex(from amount: Double) -> Int {
-        if amount >= 250 { return 0 } // Should be S
-        if amount >= 100 { return 1 } // Should be A
-        if amount >= 50  { return 2 }
-        if amount >= 25  { return 3 }
-        if amount >= 10  { return 4 }
-        return 5 // Should be F
+    func rankIndex(from amount: Double) -> String {
+        if amount >= sTier { return "S" } // Should be S
+        if amount >= aTier { return "A" } // Should be A
+        if amount >= bTier  { return "B" }
+        if amount >= cTier  { return "C" }
+        if amount >= dTier  { return "D" }
+        return "F" // Should be F
     }
 
     func addPreMadeGuests(to guestList: inout [[String]]) {
