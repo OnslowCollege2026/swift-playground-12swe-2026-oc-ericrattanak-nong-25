@@ -1,10 +1,6 @@
 // The Swift Programming Language
 // https://docs.swift.org/swift-book
 import Foundation
-@main
-struct SwiftPlayground {
-    static func main() {
-     
     //constant
     let sTier = 250.0
     let aTier = 100.0
@@ -23,7 +19,6 @@ struct SwiftPlayground {
         if amount >= dTier  { return "D" }
         return "F" // Should be F
     }
-
     func addPreMadeGuests(to guestList: inout [[String]]) {
         // Pre-made guests to help you test.
         guestList.append(["Rich Richard", "500.0"])
@@ -52,6 +47,10 @@ struct SwiftPlayground {
             print("[\(rank)] \(guest[0]) | $\(guest[1])")
         }
     }
+@main
+struct SwiftPlayground {
+    static func main() {
+     
 
     var guestList: [[String]] = []
     addPreMadeGuests(to: &guestList)
